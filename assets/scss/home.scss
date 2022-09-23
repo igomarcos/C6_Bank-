@@ -1,22 +1,67 @@
 body {
-    background: url(../images/hero-bg-desktop.webp) no-repeat;
-    background-size: cover;
     width: 100%;
-    height: calc(100vh - 100% - 100px);
-    display:flex;
-    & > header {
+    display: flex;
+
+
+    &>header {
+        position: fixed;
+        top:0;                  // serve para deixar o menu fixo em cima.
+        z-index: 100;           //serve para deixar o menu NAV por cima do conteudo do site
         height: 100px;
         width: 100%;
         display: flex;
+        background: #fff;
+        transition-duration: 0.5s;
+        justify-content: center;
+        align-items: center;
+
+        &> nav {
+            width: 60%;
+
+            > ul{
+                margin: 0;
+                display: flex;
+                
+                > li {
+                    list-style: none;
+                    margin-right: 20px;
+
+                    > a {
+                        text-decoration: none;
+                        color: #222;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
 
         button {
+            border: none;
+            text-transform: uppercase;
+            color:#333;
             width: 290px;
             height: 40px;
             background: #ffe45c;
             font-size: 0.8em;
             border-radius: 20px;
         }
-        
+
     }
 
+}
+
+.jss4 .jss6{
+    fill: hsla(0, 0%, 14%, 1);
+}
+
+.jss12{
+    width: auto;
+    height: 24px;
+}
+
+section.full-banner{
+    width: 100%;
+    background: url(../images/hero-bg-desktop.webp) no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
