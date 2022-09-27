@@ -21,8 +21,8 @@
             </svg>
         </div>
         <nav>
-            <ul>
-                <li><a href="#">Pessoa Fisica</a></li>
+            <ul class="nav">
+                <li><a  href="#">Pessoa Fisica</a></li>
                 <li><a href="#">Pessoa Juridica</a></li>
                 <li><a href="#">C6 MEI</a></li>
                 <li><a href="#">Blog</a></li>
@@ -46,7 +46,41 @@
 
     <script>
 
-        
+        //camelCase - começa com letra minuscula e a cada nova palavra usa letra maiuscula.
+        //kebab -case - tudo minusculo separado por traço.
+        const header = document.querySelector('.top-site');
+        const button = document.querySelector('.top-button');
+        const body = document.querySelector('body');
+        const lista = document.querySelector('ul');
+
+        header.style.background = 'none';
+        button.style.width = '150px';
+        button.classList.add('disabled');
+
+        //janela | site
+        //window | document
+        //callback - uma função que é passada como parametro em outra função
+        window.addEventListener('scroll', (e) => {
+            console.log(body.clientHeight);
+
+            if(window.scrollY < 100){
+                header.style.background = 'none';
+                button.classList.add('disabled');
+            }else {
+                const logo = header.querySelector(".jss12");
+
+                if (window.scrollY >= (body.clientHeight - 1000)) {
+                    header.style.background = '#000';
+                    logo.style.fill = "#fff";
+                    header.classList.add("footer-link-a");
+                } else {
+                    header.style.background = '#fff';
+                    button.classList.remove('disabled');
+                    logo.style.fill = "#000";
+                    header.classList.remove("footer-link-a");
+                }
+            }
+        });
 
     </script>
 
