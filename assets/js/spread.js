@@ -13,3 +13,4 @@ const user = {
 const{ passowrd, ...data } =  user;
 
 console.log('Oh my God!', data);
+
