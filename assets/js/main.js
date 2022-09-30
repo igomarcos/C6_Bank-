@@ -48,4 +48,22 @@ const relogio = () => {
 
 setInterval(relogio, 1000);
 
+const frases = ["um banco para 20 milhões de pessoas", "C6 Bank o seu banco!", "Cartão de Crédito sem anuidade"]
+
+//precisa pegar o total de array e usar o setInterval
+
+// "h1" - onde
+// frases - Array
+// 4 - segundos
+
+const mudaFrase = (target, frases, tempo) => {
+
+    let total = 0;
+    setInterval(()=>{
+        document.querySelector(target).innerHTML = frases[total >= frases.length - 1 ? (total = 0) : (total += 1)]; 
+    }, tempo * 1000);
+
+   }
+   
+mudaFrase("h1", frases, 4)
 

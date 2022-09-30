@@ -51,3 +51,15 @@ myFunc.showArguments(
     user.usandoArrow();
     user.usandoNominal();
 
+let soma = (a, b) => {
+    console.log(a + b);
+};
+
+let soma2 = function(a, b){
+    console.log( a + b);
+};
+
+new soma(50, 20);
+new soma2(50, 20);
+
+
