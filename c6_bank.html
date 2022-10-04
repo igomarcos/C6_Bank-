@@ -22,14 +22,16 @@
         </div>
         <nav>
             <ul class="nav">
-                <li><a  href="#">Pessoa Fisica</a></li>
+                <li><a href="#">Pessoa Fisica</a></li>
                 <li><a href="#">Pessoa Juridica</a></li>
                 <li><a href="#">C6 MEI</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Tire suas dúvidas</a></li>
             </ul>
         </nav>
-        <button class="top-button">ABRA SUA CONTA</button>
+        <a href="./login.html">
+            <button class="top-button">ABRA SUA CONTA</button>
+        </a>
     </header>
     <section class="full-banner">
         <div class="destak">
@@ -63,10 +65,10 @@
         window.addEventListener('scroll', (e) => {
             console.log(body.clientHeight);
 
-            if(window.scrollY < 100){
+            if (window.scrollY < 100) {
                 header.style.background = 'none';
                 button.classList.add('disabled');
-            }else {
+            } else {
                 const logo = header.querySelector(".jss12");
 
                 if (window.scrollY >= (body.clientHeight - 1000)) {
@@ -85,7 +87,7 @@
     </script>
 
     <script type="text/javascript" src="./assets/js/main.js"></script>
-    
+
 </body>
 
 </html>
